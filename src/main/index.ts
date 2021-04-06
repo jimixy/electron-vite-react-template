@@ -1,8 +1,9 @@
-import { app, BrowserWindow } from 'electron'
+import { BrowserWindow, app } from 'electron'
+import { getTwConfig, getTwConfigPath } from '@twstyled/util'
+
 import type { BrowserWindowConstructorOptions } from 'electron'
 import contextMenu from 'electron-context-menu'
 import windowStateKeeper from 'electron-window-state'
-import { getTwConfig, getTwConfigPath } from '@twstyled/util'
 
 const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
 
@@ -15,6 +16,7 @@ function createWindow() {
     backgroundColor: resolvedTailwindConfig.theme.colors.primary[800],
     titleBarStyle: 'hidden',
     autoHideMenuBar: true,
+    frame: false,
     trafficLightPosition: {
       x: 20,
       y: 32
@@ -23,7 +25,9 @@ function createWindow() {
       contextIsolation: true,
       devTools: isDevelopment,
       spellcheck: false,
-      nodeIntegration: true
+      nodeIntegration: true,
+      webSecurity: false,
+      enableRemoteModule: true
     },
     show: false
   }
