@@ -1,5 +1,5 @@
 import { useRecoilState, useRecoilValue } from 'recoil'
-import { todoListFilterState } from '@/renderer/store/ToDoList'
+import { todoListFilterState } from '@/renderer/store/TodoList'
 import React from 'react'
 
 export default function TodoListFilters() {

@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil'
-import { todoListState, TItem } from '@/renderer/store/ToDoList'
+import { todoListState, TItem } from '@/renderer/store/TodoList'
 
 export default function TodoItem({ item }: { item: TItem }) {
   const [todoList, setTodoList] = useRecoilState<any[]>(todoListState)

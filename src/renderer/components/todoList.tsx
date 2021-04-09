@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
-import {
-  todoListState,
-  TItem,
-  filteredTodoListState
-} from '@/renderer/store/ToDoList'
+import { TItem, filteredTodoListState } from '@/renderer/store/TodoList'
 import { useRecoilState, useRecoilValue } from 'recoil'
-import TodoItemCreator from './todoItemCreator'
+
 import TodoItem from './todoItem'
-import TodoListStats from './todoListStats'
+import TodoItemCreator from './todoItemCreator'
 import TodoListFilters from './todoListFilters'
+import TodoListStats from './todoListStats'
 
 export default function Test() {
   const todoList = useRecoilValue(filteredTodoListState)

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { todoListState, TItem } from '@/renderer/store/ToDoList'
+import { todoListState, TItem } from '@/renderer/store/TodoList'
 import { useSetRecoilState } from 'recoil'
 
 function TodoItemCreator() {

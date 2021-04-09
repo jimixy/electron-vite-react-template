@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil'
-import { todoListStatsState } from '@/renderer/store/ToDoList'
+import { todoListStatsState } from '@/renderer/store/TodoList'
 import React from 'react'
 
 export default function TodoListStats() {
