@@ -4,10 +4,10 @@ import { ConfigProvider, message } from 'antd'
 import { Router } from 'react-router-dom'
 
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
-import { createBrowserHistory } from 'history'
+import { createHashHistory } from 'history'
 import { SwitchViewRoot } from './SwitchRouter'
 
-const history = createBrowserHistory()
+const history = createHashHistory()
 
 const Main = () => {
   return (

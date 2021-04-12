@@ -8,6 +8,7 @@ import windowStateKeeper from 'electron-window-state'
 const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
 
 const isDevelopment = !app.isPackaged
+// const isDevelopment = true
 
 function createWindow() {
   const windowOptions: BrowserWindowConstructorOptions = {
@@ -23,7 +24,7 @@ function createWindow() {
     },
     webPreferences: {
       contextIsolation: true,
-      devTools: isDevelopment,
+      devTools: true,
       spellcheck: false,
       nodeIntegration: true,
       webSecurity: false,
