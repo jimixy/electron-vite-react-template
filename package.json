@@ -21,11 +21,14 @@
     "@twstyled/core": "^3.2.4",
     "@twstyled/theme": "^3.2.4",
     "@twstyled/util": "^3.2.4",
+    "antd": "^4.15.0",
+    "dynamic-import-polyfill": "^0.1.1",
     "electron-context-menu": "^2.5.0",
     "electron-window-state": "^5.0.3",
     "framer-motion": "3.7.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-router-dom": "^5.2.0",
     "recoil": "^0.2.0",
     "tailwindcss": "^2.0.3"
   },
@@ -34,14 +37,15 @@
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
     "@vitejs/plugin-react-refresh": "^1.1.0",
     "chalk": "^4.1.0",
     "concurrently": "^6.0.0",
     "cross-env": "^7.0.3",
-    "env-cmd": "^10.1.0",
     "electron": "^11.3.0",
     "electron-builder": "^22.9.1",
     "electron-notarize": "^1.0.0",
+    "env-cmd": "^10.1.0",
     "esbuild": "^0.8.53",
     "esbuild-register": "^2.0.0",
     "eslint": "^7.20.0",
@@ -114,9 +118,15 @@
         }
       ]
     },
-    "asar": false,
+    "asar": true,
     "extraMetadata": {
       "main": "main/index.js"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true,
+      "language": 2052
     },
     "files": [
       {

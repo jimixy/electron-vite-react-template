@@ -8,6 +8,7 @@ dist-ssr
 
 # Secrets
 # .env-secrets.json
+yarn-error.log
 
 # Workspaces
 
