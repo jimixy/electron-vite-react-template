@@ -41,7 +41,7 @@ function createWindow() {
   if (isDevelopment) {
     void browserWindow.loadURL(`http://localhost:${port}`)
     browserWindow.webContents.on('did-finish-load', () => {
-      browserWindow.openDevTools()
+      browserWindow.webContents.openDevTools()
     })
   } else {
     void browserWindow.loadFile('./index.html')

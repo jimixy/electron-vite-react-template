@@ -13,7 +13,7 @@
     "baseUrl": "../../src",
     "paths": {
       "@/renderer/*": ["renderer/*"],
-      "@/common/*": ["common/*"]
+      "@/common/*": ["common/*"],
     },
     "allowSyntheticDefaultImports": true
   },

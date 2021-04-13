@@ -1,14 +1,15 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import Layout from '@/renderer/layout'
 
 const Home: React.FC = () => {
   const history = useHistory()
   return (
-    <div>
+    <Layout>
       这是首页
       <br />
       <button onClick={() => history.push('/login')}>去登录页</button>
-    </div>
+    </Layout>
   )
 }
 

@@ -1,3 +1,4 @@
+import '../index.twstyled.css'
 import './assets/css/index.twstyled.css'
 
 import ReactDOM from 'react-dom'

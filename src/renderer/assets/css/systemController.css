@@ -1,0 +1,111 @@
+.systemController {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    display: flex;
+    min-height: 30px;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag !important;
+}
+
+.drag {
+    -webkit-app-region: drag !important;
+}
+
+.toggle-size {
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    background-color: transparent;
+}
+
+.toggle-size:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.toggle-size-darwin {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.toggle-size-darwin.unfocus {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.toggle-size-darwin.focus {
+    background-color: #28ca40;
+    border: 1px solid #30ae2e;
+}
+
+.system-mini {
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    background-color: transparent;
+}
+
+.system-mini:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.system-close {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.system-close.focus {
+    background-color: #fe5f56;
+    border: 1px solid #e34942;
+}
+
+.system-close.unfocus {
+    background-color: #dcdddd;
+    border: 1px solid #ced4cc;
+}
+
+.system-close-win32 {
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    background-color: transparent;
+}
+
+.system-close-win32:hover {
+    background-color: #e81123;
+}
+
+.system-toggle-darwin {
+    transform: scale(1.12);
+}
+
+.ctl-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 68px;
+    padding: 0 7.5px;
+}
