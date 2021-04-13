@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react'
+import React from 'react'
 import { ConfigProvider, message } from 'antd'
 
 import { Router } from 'react-router-dom'
@@ -6,6 +6,8 @@ import { Router } from 'react-router-dom'
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
 import { createHashHistory } from 'history'
 import { SwitchViewRoot } from './SwitchRouter'
+
+message.config({ top: '50%' as any, duration: 2 })
 
 const history = createHashHistory()
 

@@ -2,26 +2,22 @@ import { BrowserWindow, app } from 'electron'
 import { getTwConfig, getTwConfigPath } from '@twstyled/util'
 
 import type { BrowserWindowConstructorOptions } from 'electron'
-import contextMenu from 'electron-context-menu'
-import windowStateKeeper from 'electron-window-state'
 
 const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
 
 const isDevelopment = !app.isPackaged
-// const isDevelopment = true
 
 function createWindow() {
   const windowOptions: BrowserWindowConstructorOptions = {
-    minWidth: 800,
-    minHeight: 600,
+    center: true,
+    width: 1366,
+    height: 768,
+    minWidth: 1366,
+    minHeight: 768,
     backgroundColor: resolvedTailwindConfig.theme.colors.primary[800],
     titleBarStyle: 'hidden',
     autoHideMenuBar: true,
     frame: false,
-    trafficLightPosition: {
-      x: 20,
-      y: 32
-    },
     webPreferences: {
       contextIsolation: true,
       devTools: true,
@@ -33,30 +29,7 @@ function createWindow() {
     show: false
   }
 
-  contextMenu({
-    showSearchWithGoogle: false,
-    showCopyImage: false,
-    prepend: (defaultActions, params, browserWindow) => [
-      {
-        label: 'its like magic 💥'
-      }
-    ]
-  })
-
-  const windowState = windowStateKeeper({
-    defaultWidth: windowOptions.minWidth,
-    defaultHeight: windowOptions.minHeight
-  })
-
-  const browserWindow = new BrowserWindow({
-    ...windowOptions,
-    x: windowState.x,
-    y: windowState.y,
-    width: windowState.width,
-    height: windowState.height
-  })
-
-  windowState.manage(browserWindow)
+  const browserWindow = new BrowserWindow(windowOptions)
 
   browserWindow.once('ready-to-show', () => {
     browserWindow.show()
@@ -67,9 +40,16 @@ function createWindow() {
 
   if (isDevelopment) {
     void browserWindow.loadURL(`http://localhost:${port}`)
+    browserWindow.webContents.on('did-finish-load', () => {
+      browserWindow.openDevTools()
+    })
   } else {
     void browserWindow.loadFile('./index.html')
   }
+}
+
+if (!app.requestSingleInstanceLock()) {
+  app.quit()
 }
 
 void app.whenReady().then(createWindow)

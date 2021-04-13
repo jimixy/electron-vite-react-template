@@ -1,7 +1,7 @@
 {
-  "name": "electron-vite-react",
+  "name": "speakin-intelligent-metting",
   "description": "This Starter utilizes Electron, TypeScript, Vite, React, Tailwind CSS with twstyled CSS in JS. It tries to adhere to best practices.",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -22,10 +22,6 @@
     "@twstyled/theme": "^3.2.4",
     "@twstyled/util": "^3.2.4",
     "antd": "^4.15.0",
-    "dynamic-import-polyfill": "^0.1.1",
-    "electron-context-menu": "^2.5.0",
-    "electron-window-state": "^5.0.3",
-    "framer-motion": "3.7.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.2.0",
@@ -59,7 +55,6 @@
     "@linaria/babel-preset": "npm:@twstyled/linaria-babel-preset@3.0.0-beta.1",
     "@linaria/preeval": "npm:@twstyled/linaria-preeval@3.0.0-beta.1"
   },
-  "author": "twstyled contributors",
   "browserslist": [
     "last 1 electron version"
   ],
@@ -68,8 +63,8 @@
       "output": "dist",
       "buildResources": "public"
     },
-    "appId": "dev.twstyled.app",
-    "productName": "twstyled-app",
+    "appId": "com.speakin-intelligent-metting",
+    "productName": "智能会议系统",
     "afterSign": "scripts/notarize.js",
     "mac": {
       "category": "public.app-category.developer-tools",
