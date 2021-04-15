@@ -1,5 +1,6 @@
 import React from 'react'
-import { remote } from 'electron'
+
+const { remote } = require('electron')
 
 const Wrap: React.FC<{ focus: boolean; hover: boolean }> = (props) => {
   const _size = 24

@@ -1,10 +1,9 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
-import twstyled from 'vite-plugin-twstyled'
 
 export default defineConfig({
-  plugins: [twstyled(), reactRefresh()],
+  plugins: [reactRefresh()],
   base: './',
   root: resolve('./src/renderer'),
   build: {

@@ -1,6 +1,6 @@
 {
   "name": "speakin-intelligent-metting",
-  "description": "This Starter utilizes Electron, TypeScript, Vite, React, Tailwind CSS with twstyled CSS in JS. It tries to adhere to best practices.",
+  "description": "智能 会议",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -18,9 +18,6 @@
     "publish:win": "env-cmd -r ./.config/.env-secrets.json -e production electron-builder --win"
   },
   "dependencies": {
-    "@twstyled/core": "^3.2.4",
-    "@twstyled/theme": "^3.2.4",
-    "@twstyled/util": "^3.2.4",
     "antd": "^4.15.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -34,11 +31,12 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@sync-labs/eslint-config": "^2.2.6",
-    "@types/node": "^14.14.31",
+    "@types/node": "^14.14.39",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "@vitejs/plugin-react-refresh": "^1.1.0",
+    "autoprefixer": "^10.2.5",
     "chalk": "^4.1.0",
     "concurrently": "^6.0.0",
     "cross-env": "^7.0.3",
@@ -49,16 +47,13 @@
     "esbuild": "^0.8.53",
     "esbuild-register": "^2.0.0",
     "eslint": "^7.20.0",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "rollup-plugin-esbuild": "^3.0.2",
+    "tailwindcss": "^2.1.1",
     "typescript": "^4.1.2",
-    "vite": "^2.0.4",
-    "vite-plugin-twstyled": "^3.2.4"
-  },
-  "resolutions": {
-    "@linaria/babel-preset": "npm:@twstyled/linaria-babel-preset@3.0.0-beta.1",
-    "@linaria/preeval": "npm:@twstyled/linaria-preeval@3.0.0-beta.1"
+    "vite": "^2.0.4"
   },
   "browserslist": [
     "last 1 electron version"
@@ -152,8 +147,5 @@
         "to": "./assets"
       }
     ]
-  },
-  "workspaces": [
-    "lib-twstyled/packages/*"
-  ]
+  }
 }

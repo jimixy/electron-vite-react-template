@@ -1,10 +1,8 @@
 import { BrowserWindow, app } from 'electron'
 
 import type { BrowserWindowConstructorOptions } from 'electron'
-// import { getTwConfig, getTwConfigPath } from '@twstyled/util'
 
 const isDevelopment = !app.isPackaged
-// const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
 
 function createWindow() {
   const windowOptions: BrowserWindowConstructorOptions = {

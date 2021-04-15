@@ -7,10 +7,11 @@
  */
 
 import React from 'react'
-import { remote } from 'electron'
 import Close from './Close'
 import Mini from './Mini'
 import Toggle from './Toggle'
+
+const { remote } = require('electron')
 
 const Wrap: React.FC = () => {
   const [focus, setFocus] = React.useState(

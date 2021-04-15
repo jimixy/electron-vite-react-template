@@ -1,5 +1,6 @@
 import React from 'react'
-import { remote } from 'electron'
+
+const { remote } = require('electron')
 
 /** 满屏 ===> 非满屏 */
 const WrapFullToNormal: React.FC<{ color: string }> = (props) => {

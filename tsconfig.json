@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "types": ["node"],
     "lib": ["es6"],
     "moduleResolution": "node",
     "module": "commonjs",
