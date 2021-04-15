@@ -1,11 +1,11 @@
 import React from 'react'
-import { remote } from 'electron'
+// import { remote } from 'electron'
 
 const Wrap: React.FC = () => {
   const _size = 16
   const _color = '#00D4E9'
   const onFunc = () => {
-    remote.getCurrentWindow().minimize()
+    // remote.getCurrentWindow().minimize()
   }
   return (
     <span onClick={onFunc} className="toggle-size">

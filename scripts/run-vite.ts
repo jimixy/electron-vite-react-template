@@ -22,6 +22,7 @@ function LoggerPlugin(): Plugin {
 
 export default async function startViteServer(): Promise<() => Promise<void>> {
   const cfg = config as InlineConfig
+  console.log('config', cfg)
   const server = await createServer({
     ...cfg,
     configFile: false,

@@ -1,8 +1,10 @@
-import * as path from 'path'
+// import path from 'path'
 import { Modal } from 'antd'
 import React from 'react'
-import { remote } from 'electron'
+// import { remote } from 'electron'
+// const path = require('path')
 
+console.log(11, window)
 // export const entryPath = path.join(process.cwd(), 'package.json')
 
 // console.log('entryPath', entryPath)
@@ -12,12 +14,12 @@ const Wrap: React.FC = () => {
   const _color = '#00D4E9'
   const [color, setColor] = React.useState<string>(_color)
   const onFunc = () => {
-    Modal.confirm({
-      title: '提示',
-      centered: true,
-      content: <p className="ui-ta-c">您确认退出{'智能会议系统'}系统？</p>,
-      onOk: remote.getCurrentWindow().close
-    })
+    // Modal.confirm({
+    //   title: '提示',
+    //   centered: true,
+    //   content: <p className="ui-ta-c">您确认退出{'智能会议系统'}系统？</p>,
+    //   onOk: remote.getCurrentWindow().close
+    // })
   }
   const onMouseEnter = () => {
     setColor('#fff')

@@ -24,7 +24,7 @@
     "paths": {
       "@/renderer/*": ["src/renderer/*"],
       "@/common/*": ["src/common/*"],
-      "~/*": ["./*"]
+      "root/*": ["/*"]
     }
   },
   "include": [

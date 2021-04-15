@@ -29,6 +29,8 @@
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "@sync-labs/eslint-config": "^2.2.6",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.0",

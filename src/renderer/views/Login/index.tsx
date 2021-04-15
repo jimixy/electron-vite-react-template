@@ -9,7 +9,7 @@ const Login: React.FC = () => {
   return (
     <div>
       登录页
-      <TopBar></TopBar>
+      {/* <TopBar></TopBar> */}
       <br />
       <button className="bg-blue-500 p-8" onClick={() => history.push('/home')}>
         去首页
