@@ -15,11 +15,33 @@ import {
   entryPath
 } from './common'
 
+const rollup = require('rollup')
 const chalk = require('chalk')
+const options = require('./rollup.config')
 
 function reportError(errors: CompileError[]) {
   const reportingMessage = formatDiagnosticsMessage(errors)
   console.error(reportingMessage)
+}
+
+function watchFunc() {
+  // once here, all resources are available
+  const watcher = rollup.watch(options('development'))
+  watcher.on('change', (filename) => {
+    // const log = chalk.green(`change -- ${filename}`)
+    // console.log(111, filename)
+  })
+  watcher.on('event', (ev) => {
+    // console.log(222, ev)
+    if (ev.code === 'END') {
+      buildComplete(outDir)
+      //   // init-未启动、started-第一次启动、restarted-重新启动
+      //   electron.electronState === 'init' ? electron.start() : electron.restart()
+      // } else if (ev.code === 'ERROR') {
+      //   console.log(ev.error)
+      // }
+    }
+  })
 }
 
 function buildStart() {
@@ -33,7 +55,6 @@ async function electronClosed() {
 }
 
 function buildComplete(dir: string) {
-  console.log(finishMessageDev)
   void startElectron(dir, electronClosed)
 }
 
@@ -47,8 +68,10 @@ let viteClose: () => Promise<void>
 async function main() {
   // Start vite server
   viteClose = await startViteServer()
+
+  watchFunc()
   // Start dev for main process
-  void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
+  // void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
 }
 
 void main()

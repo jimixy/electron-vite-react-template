@@ -2,16 +2,9 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import twstyled from 'vite-plugin-twstyled'
-import commonjs from '@rollup/plugin-commonjs'
-import nodeResolve from '@rollup/plugin-node-resolve'
 
 export default defineConfig({
-  plugins: [
-    // commonjs(),
-    twstyled(),
-    // nodeResolve({ preferBuiltins: true, browser: true }),
-    reactRefresh()
-  ],
+  plugins: [twstyled(), reactRefresh()],
   base: './',
   root: resolve('./src/renderer'),
   build: {

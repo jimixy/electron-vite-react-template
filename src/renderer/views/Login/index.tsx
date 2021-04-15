@@ -1,7 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import TopBar from '@/renderer/components/top-bar'
-// import { css } from '@twstyled/core'
 import { styles, HeroHeading } from './index.twstyled'
 
 const Login: React.FC = () => {
@@ -20,7 +19,7 @@ const Login: React.FC = () => {
         <div>2</div>
         <div>3</div>
       </div>
-      <div className={'text-right mb-10'}>sfsf</div>
+      <div className="text-right mb-10">sfsf</div>
       <div className={styles.heading1}>234234</div>
       <HeroHeading>23234</HeroHeading>
     </div>

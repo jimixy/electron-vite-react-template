@@ -8,15 +8,13 @@
 import React from 'react'
 import Close from './Close'
 import Mini from './Mini'
-// import Toggle from './Toggle'
-
-console.log(22)
+import Toggle from './Toggle'
 
 const Wrap: React.FC = () => {
   return (
     <>
       <Mini />
-      {/* <Toggle /> */}
+      <Toggle />
       <Close />
     </>
   )

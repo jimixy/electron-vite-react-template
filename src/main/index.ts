@@ -1,11 +1,10 @@
 import { BrowserWindow, app } from 'electron'
-import { getTwConfig, getTwConfigPath } from '@twstyled/util'
 
 import type { BrowserWindowConstructorOptions } from 'electron'
-
-const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
+// import { getTwConfig, getTwConfigPath } from '@twstyled/util'
 
 const isDevelopment = !app.isPackaged
+// const resolvedTailwindConfig = getTwConfig(getTwConfigPath())
 
 function createWindow() {
   const windowOptions: BrowserWindowConstructorOptions = {
@@ -14,12 +13,11 @@ function createWindow() {
     height: 768,
     minWidth: 1366,
     minHeight: 768,
-    backgroundColor: resolvedTailwindConfig.theme.colors.primary[800],
     titleBarStyle: 'hidden',
+    backgroundColor: '#204959',
     autoHideMenuBar: true,
     frame: false,
     webPreferences: {
-      contextIsolation: true,
       devTools: true,
       spellcheck: false,
       nodeIntegration: true,
