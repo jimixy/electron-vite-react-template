@@ -4,5 +4,17 @@
 @import "./test.css";
 
 .btn {
-  @apply px-4 text-white rounded ;
+  @apply rounded-0px ;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag !important;
+}
+
+.drag {
+  -webkit-app-region: drag !important;
+}
+
+.body {
+  user-select: none;
 }

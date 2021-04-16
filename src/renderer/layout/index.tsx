@@ -2,6 +2,7 @@
 // import Nav from './Nav';
 import React from 'react'
 import { Header } from './Header'
+import './index.css'
 
 export interface BaseLayoutProps {
   className?: string
@@ -14,14 +15,12 @@ export default class extends React.Component<BaseLayoutProps> {
 
   render() {
     return (
-      <section className="">
+      <div className="layout flex flex-col min-h-screen">
         <Header />
-        <main className="">
-          <div className="">
-            {React.Children.toArray(this.props.children).map((child) => child)}
-          </div>
+        <main className="main">
+          {React.Children.toArray(this.props.children).map((child) => child)}
         </main>
-      </section>
+      </div>
     )
   }
 }

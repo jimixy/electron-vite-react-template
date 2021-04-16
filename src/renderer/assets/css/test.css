@@ -10,5 +10,5 @@
 }
 
 .btn2 {
-  @apply px-4 text-blue-500 rounded ;
+  @apply rounded-0px ;
 }

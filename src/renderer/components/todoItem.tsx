@@ -2,7 +2,7 @@ import { useRecoilState } from 'recoil'
 import { todoListState, TItem } from '@/renderer/store/TodoList'
 
 export default function TodoItem({ item }: { item: TItem }) {
-  const [todoList, setTodoList] = useRecoilState<any[]>(todoListState)
+  const [todoList, setTodoList] = useRecoilState<TItem[]>(todoListState)
   const index = todoList.findIndex((listItem) => listItem === item)
 
   const editItemText = ({

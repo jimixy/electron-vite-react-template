@@ -6,14 +6,6 @@
   min-height: 30px;
 }
 
-.no-drag {
-  -webkit-app-region: no-drag !important;
-}
-
-.drag {
-  -webkit-app-region: drag !important;
-}
-
 .toggle-size {
   padding: 0 16px;
   display: flex;
