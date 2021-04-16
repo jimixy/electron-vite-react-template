@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import { Spin } from 'antd'
 
 const RouterWrapNotFound = () => {
@@ -42,6 +42,37 @@ export const SwitchViewRoot = () => (
     <Route
       path="/home"
       component={lazy(() => import('@/renderer/views/Home'))}
+    ></Route>
+  </PackingWithAuth>
+)
+
+/**
+ * @public
+ *
+ * @Todo二级级路由
+ */
+export const SwitchViewNavigation = () => (
+  <PackingWithAuth>
+    <Route
+      path="/navigation/"
+      exact
+      component={() => <Redirect to="/navigation/OnlineMeeting" />}
+    ></Route>
+    <Route
+      path="/navigation/OnlineMeeting"
+      component={lazy(
+        () => import('@/renderer/views/Navigation/OnlineMeeting')
+      )}
+    ></Route>
+    <Route
+      path="/navigation/OfflineConversion"
+      component={lazy(
+        () => import('@/renderer/views/Navigation/OfflineConversion')
+      )}
+    ></Route>
+    <Route
+      path="/navigation/RecordManage"
+      component={lazy(() => import('@/renderer/views/Navigation/RecordManage'))}
     ></Route>
   </PackingWithAuth>
 )

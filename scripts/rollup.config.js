@@ -41,11 +41,9 @@ module.exports = (env = "production") => {
           ".js": "jsx",
         },
       }),
-      alias({
-        entries: [
-          { find: "@main", replacement: path.join(__dirname, "../src/main") },
-        ],
-      }),
+      // alias({
+      //   entries: [{ find: "@/root", replacement: path.join(__dirname, "../") }],
+      // }),
     ],
     external: [
       "crypto",

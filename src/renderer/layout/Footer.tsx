@@ -1,37 +1,23 @@
-import { Dropdown, Menu, Modal, message } from 'antd'
-import React, { useEffect } from 'react'
+import React from 'react'
+import Logo from '@/renderer/assets/img/icon.png'
 
 export interface FooterProps {}
 
-const Footer: React.FC = ({ children }) => {
+export const Footer: React.FC = ({ children }) => {
   return (
-    <footer className="flex">
-      <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
-        <p className="">
-          Created by{` `}
-          <a
-            className="font-bold no-underline"
-            href="https://bryant.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Taylor Bryant
-          </a>
-        </p>
-
-        <p>
-          <a
-            className="font-bold no-underline"
-            href="https://github.com/taylorbryant/gatsby-starter-tailwind"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </p>
-      </nav>
+    <footer className="flex items-center justify-between h-80px mx-10px">
+      <div>
+        <div>终端编号: xxxxx</div>
+        <div>系统版本: V1.0.0</div>
+      </div>
+      <img className="w-80px" src={Logo} alt="" />
+      <div className="flex">
+        <img className="w-20px mr-10px" src={Logo} alt="" />
+        <div>
+          <div>有问题，请致电</div>
+          <div>400-000-0000</div>
+        </div>
+      </div>
     </footer>
   )
 }
-
-export default Footer
