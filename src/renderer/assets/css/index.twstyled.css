@@ -1,9 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import ".systemController.css";
+/*
+*  测试文字
+*/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .btn {
-    @apply px-4;
+  @apply px-4 text-white rounded;
 }

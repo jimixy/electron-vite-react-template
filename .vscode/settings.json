@@ -1,27 +1,31 @@
 {
   "search.useIgnoreFiles": false,
   "search.exclude": {
-      "**/.next": true,
-      "**/build": true,
-      "**/node_modules": true,
-      "**/out": true,
-      "**/script.js": true,
-      "**/*-cache": true,
-      "**/dist": true,
-      "yarn.lock": true,
-      "**/*.mdx": true
+    "**/.next": true,
+    "**/build": true,
+    "**/node_modules": true,
+    "**/out": true,
+    "**/script.js": true,
+    "**/*-cache": true,
+    "**/dist": true,
+    "yarn.lock": true,
+    "**/*.mdx": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "editor.formatOnSave": false,
   "editor.codeActionsOnSaveTimeout": 6000,
   "css.lint.unknownAtRules": "ignore",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "eslint.options": {
     "configFile": "./.config/.eslintrc.js"
   },
   "eslint.lintTask.options": "-c ${workspaceRoot}/.config/.eslintrc.js --ext .ts,.js,.tsx .",
-  "eslint.lintTask.enable": true, 
+  "eslint.lintTask.enable": true,
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -35,7 +39,7 @@
     "editor.formatOnSave": false
   },
   "[json]": {
-    "editor.formatOnSave": true   
+    "editor.formatOnSave": true
   },
   "eslint.validate": [
     "javascript",
