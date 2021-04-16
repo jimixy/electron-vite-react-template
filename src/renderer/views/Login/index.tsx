@@ -11,11 +11,15 @@ const Login: React.FC = () => {
         去首页
       </button>
       <div className="flex flex-col items-center justify-center h-full pb-0">
-        <div>1</div>
+        <div className="color-100">1</div>
         <div>2</div>
         <div>3</div>
       </div>
-      <div className="test">sfsf</div>
+      <div className="test">
+        sfsf
+        <p className="dd">sss</p>
+      </div>
+      <div className="btn2">test2</div>
     </div>
   )
 }

@@ -4,5 +4,5 @@
 @import "./test.css";
 
 .btn {
-  @apply px-4 text-white rounded;
+  @apply px-4 text-white rounded ;
 }

@@ -1,5 +1,4 @@
 module.exports = {
-  // purge: false,
   darkMode: false, // or 'media' or 'class'
   purge: {
     content: ["./src/renderer/index.html", "./src/**/*.{js,ts,jsx,tsx}"],

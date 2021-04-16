@@ -1,5 +1,4 @@
 // import { BaseContentProps } from './Content';
-import ImageBg from '@/Render/assets/img/layout/background.png'
 // import Nav from './Nav';
 import React from 'react'
 import { Header } from './Header'

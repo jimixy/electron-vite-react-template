@@ -2,4 +2,13 @@
 .test {
   color: red;
   font-size: 20px;
+
+  .dd {
+    font-size: 12px;
+    color: blue;
+  }
+}
+
+.btn2 {
+  @apply px-4 text-blue-500 rounded ;
 }

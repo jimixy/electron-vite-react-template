@@ -16,6 +16,7 @@ function createWindow() {
     autoHideMenuBar: true,
     frame: false,
     webPreferences: {
+      contextIsolation: false,
       devTools: true,
       spellcheck: false,
       nodeIntegration: true,
