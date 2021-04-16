@@ -15,7 +15,7 @@ const Login: React.FC = () => {
         <div>2</div>
         <div>3</div>
       </div>
-      <div className="text-right mb-10">sfsf</div>
+      <div className="test">sfsf</div>
     </div>
   )
 }

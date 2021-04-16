@@ -2,9 +2,7 @@ import { Dropdown, Menu, Modal, message } from 'antd'
 import React, { useEffect } from 'react'
 import SystemController from '@/renderer/components/SystemController'
 
-// const process = require('process')
-
-// console.log('process', process)
+console.log('process', process)
 
 export const Header: React.FC = () => {
   return (
