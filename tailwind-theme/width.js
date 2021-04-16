@@ -1,6 +1,6 @@
 const MIN_WIDTH = 0; // 最小値
 const MAX_WIDTH = 400; // 最大値
-const INCREMENTS_NUM = 1; // 增量
+const INCREMENTS_NUM = 10; // 增量
 let incrementsObj = createIncrementsObj();
 
 const OTHER_OBJ = {

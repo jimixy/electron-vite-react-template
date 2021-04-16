@@ -1,5 +1,5 @@
 const MIN = 0; // 最小値
-const MAX = 100; // 最大値
+const MAX = 50; // 最大値
 const INCREMENTS_NUM = 1; // 增量
 let incrementsObj = createIncrementsObj();
 

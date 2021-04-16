@@ -1,11 +1,3 @@
-/**
- * @Author yejiang1015
- * @Date 2020-06-19 22:38:32
- * @Last Modified by: yejiang1015
- * @Last Modified time: 2020-08-25 14:12:28
- * @Message Mac 系统
- */
-
 import React from 'react'
 import Close from './Close'
 import Mini from './Mini'
