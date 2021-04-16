@@ -1,9 +1,9 @@
 import { Dropdown, Menu, Modal, message } from 'antd'
 import React, { useEffect } from 'react'
 
-console.log('process', process)
+export interface FooterProps {}
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = ({ children }) => {
   return (
     <footer className="flex">
       <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
@@ -33,3 +33,5 @@ export const Footer: React.FC = () => {
     </footer>
   )
 }
+
+export default Footer

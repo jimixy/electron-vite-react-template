@@ -1,8 +1,7 @@
-import { Dropdown, Menu, Modal, message } from 'antd'
-import React, { useEffect } from 'react'
+import React from 'react'
 import SystemController from '@/renderer/components/SystemController'
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header className="flex items-center justify-between h-80px leading-80">
       <div>智能会议系统</div>
@@ -13,3 +12,4 @@ export const Header: React.FC = () => {
     </header>
   )
 }
+export default Header
