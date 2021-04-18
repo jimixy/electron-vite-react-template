@@ -1,6 +1,9 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import Test1 from '@/renderer/components/test1'
+import { useHistory } from 'react-router-dom'
+const fs = require('fs');
+const electron = require('electron');
+console.log(111, electron);
 
 const Login: React.FC = () => {
   const history = useHistory()

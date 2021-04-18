@@ -10,7 +10,7 @@
     "preview": "cross-env NODE_ENV=production electron ./dist/main",
     "dev:renderer": "vite",
     "dev:main": "cross-env NODE_ENV=development node -r esbuild-register ./scripts/dev.ts",
-    "build": "rimraf dist && vite build && npm run prod:esbuild && npm run publish:win",
+    "build": "rimraf dist && vite build && npm run prod:esbuild",
     "prod:esbuild": "cross-env NODE_ENV=production node -r esbuild-register ./scripts/prod.ts",
     "prod:tsc": "tsc --project ./src/main/tsconfig.json",
     "publish": "concurrently \"npm:publish:mac\" \"npm:publish:win\"",
@@ -73,27 +73,6 @@
       "artifactName": "${productName}_setup_${version}.${ext}",
       "target": [
         "dmg"
-      ]
-    },
-    "dmg": {
-      "background": "public/dmgBackground.png",
-      "icon": "icon.icns",
-      "iconSize": 155,
-      "window": {
-        "width": 660,
-        "height": 400
-      },
-      "contents": [
-        {
-          "x": 123,
-          "y": 172
-        },
-        {
-          "x": 539,
-          "y": 168,
-          "type": "link",
-          "path": "/Applications"
-        }
       ]
     },
     "win": {

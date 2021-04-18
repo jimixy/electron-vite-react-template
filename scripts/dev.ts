@@ -1,19 +1,20 @@
-import * as path from 'path'
-import * as fs from 'fs'
 import * as esbuild from 'esbuild'
-import startViteServer from './run-vite'
-import startElectron from './run-electron'
+import * as fs from 'fs'
+import * as path from 'path'
 
 import {
-  cannotFoundTSConfigMessage,
   CompileError,
+  cannotFoundTSConfigMessage,
+  entryPath,
   finishMessageDev,
   formatDiagnosticsMessage,
-  startMessage,
   mainPath,
   outDir,
-  entryPath
+  startMessage
 } from './common'
+
+import startElectron from './run-electron'
+import startViteServer from './run-vite'
 
 const rollup = require('rollup')
 const chalk = require('chalk')
@@ -69,9 +70,9 @@ async function main() {
   // Start vite server
   viteClose = await startViteServer()
 
-  watchFunc()
+  // watchFunc()
   // Start dev for main process
-  // void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
+  void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
 }
 
 void main()
