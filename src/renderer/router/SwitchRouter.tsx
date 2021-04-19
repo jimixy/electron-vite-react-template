@@ -6,7 +6,6 @@ import { Spin } from 'antd'
 const RouterWrapNotFound = () => {
   return <div>Not Fount</div>
 }
-
 /**
  * @private
  *
@@ -42,6 +41,10 @@ export const SwitchViewRoot = () => (
     <Route
       path="/home"
       component={lazy(() => import('@/renderer/views/Home'))}
+    ></Route>
+    <Route
+      path="/navigation"
+      component={lazy(() => import('@/renderer/views/Navigation'))}
     ></Route>
   </PackingWithAuth>
 )

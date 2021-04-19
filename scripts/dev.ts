@@ -1,6 +1,6 @@
-import * as esbuild from 'esbuild'
 import * as fs from 'fs'
 import * as path from 'path'
+import * as esbuild from 'esbuild'
 
 import {
   CompileError,
@@ -70,9 +70,9 @@ async function main() {
   // Start vite server
   viteClose = await startViteServer()
 
-  // watchFunc()
+  watchFunc()
   // Start dev for main process
-  void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
+  // void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
 }
 
 void main()

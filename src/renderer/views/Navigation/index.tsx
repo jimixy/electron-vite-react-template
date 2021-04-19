@@ -1,4 +1,4 @@
-import Layout from '@/renderer/layout'
+import Layout from '@/renderer/layout/Navigation'
 import React from 'react'
 import { SwitchViewNavigation } from '@/renderer/router/SwitchRouter'
 

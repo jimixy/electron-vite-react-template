@@ -42,7 +42,12 @@ module.exports = (env = "production") => {
         },
       }),
       // alias({
-      //   entries: [{ find: "@/root", replacement: path.join(__dirname, "../") }],
+      //   entries: [
+      //     {
+      //       find: "@/renderer",
+      //       replacement: path.join(__dirname, "./src/renderer"),
+      //     },
+      //   ],
       // }),
     ],
     external: [

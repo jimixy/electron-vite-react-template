@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Layout from '@/renderer/layout'
+import Layout from '@/renderer/layout/Navigation'
 
 const Wrap: React.FC = () => {
   const history = useHistory()
