@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '@/renderer/assets/img/icon.png'
+import pkj from '@/root/package.json'
 
 export interface FooterProps {}
 
@@ -8,7 +9,7 @@ export const Footer: React.FC = ({ children }) => {
     <footer className="flex items-center justify-between h-80px mx-10px">
       <div>
         <div>终端编号: xxxxx</div>
-        <div>系统版本: V1.0.0</div>
+        <div>系统版本: V{pkj.version}</div>
       </div>
       <img className="w-80px" src={Logo} alt="" />
       <div className="flex">

@@ -19,6 +19,10 @@ export default defineConfig({
       {
         find: '@/common',
         replacement: resolve(__dirname, 'src/common')
+      },
+      {
+        find: '@/root',
+        replacement: process.cwd()
       }
     ]
   },

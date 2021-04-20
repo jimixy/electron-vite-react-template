@@ -11,8 +11,7 @@ import {
   startMessage,
   CompileError,
   mainPath,
-  outDirMain,
-  entryPath
+  outDirMain
 } from './common'
 
 function reportError(errors: CompileError[]) {
@@ -55,6 +54,20 @@ function transformErrors(error: esbuild.BuildFailure): CompileError[] {
   return errors
 }
 
+function listFile(dir, files = []) {
+  const arr = fs.readdirSync(dir)
+  if (!arr) return files
+  arr.forEach(function (item) {
+    const fullpath = path.join(dir, item)
+    if (fs.statSync(fullpath).isDirectory()) {
+      listFile(fullpath, files)
+    } else {
+      files.push(fullpath)
+    }
+  })
+  return files
+}
+
 //
 // SUPPORTING BUILD SCRIPT
 //
@@ -72,7 +85,7 @@ async function esProd(
   try {
     await esbuild.build({
       outdir: outDirMain,
-      entryPoints: [entryPath],
+      entryPoints: listFile(mainPath).filter((k) => k.endsWith('.ts')),
       tsconfig: tsconfigPath,
       format: 'cjs',
       logLevel: 'info',

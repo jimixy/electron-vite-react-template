@@ -14,7 +14,7 @@
     "paths": {
       "@/renderer/*": ["renderer/*"],
       "@/common/*": ["common/*"],
-      "@/root/*": ["/*"]
+      "@/root/*": ["../*"]
     },
     "allowSyntheticDefaultImports": true
   },

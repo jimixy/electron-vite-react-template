@@ -1,5 +1,6 @@
 import { Modal } from 'antd'
 import React from 'react'
+import pkj from '@/root/package.json'
 
 const { remote } = require('electron')
 
@@ -11,7 +12,7 @@ const Wrap: React.FC = () => {
     Modal.confirm({
       title: '提示',
       centered: true,
-      content: <p className="ui-ta-c">您确认退出{'智能会议系统'}系统？</p>,
+      content: <p className="ui-ta-c">您确认退出{pkj.build.productName}？</p>,
       onOk: remote.getCurrentWindow().close
     })
   }

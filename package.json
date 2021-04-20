@@ -2,6 +2,7 @@
   "name": "speakin-intelligent-metting",
   "description": "智能 会议 系统",
   "version": "1.0.0",
+  "author": "jimi",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -88,7 +89,7 @@
       ],
       "artifactName": "${productName}_setup_${version}.${ext}"
     },
-    "asar": true,
+    "asar": false,
     "extraMetadata": {
       "main": "main/index.js"
     },
