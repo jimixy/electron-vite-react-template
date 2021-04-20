@@ -1,9 +1,8 @@
 import * as chalk from 'chalk'
 
 import { InlineConfig, Plugin, createServer } from 'vite'
-import { consoleViteMessagePrefix, srcPath } from './common'
-
 import config from '../vite.config'
+import { consoleViteMessagePrefix, srcPath } from './common'
 
 function LoggerPlugin(): Plugin {
   return {
@@ -34,7 +33,7 @@ export default async function startViteServer(): Promise<() => Promise<void>> {
   const address = server.httpServer.address()
   if (typeof address === 'object') {
     const port = address.port
-    process.env.PORT = port + '';
+    process.env.PORT = port + ''
     console.log(
       chalk.green(consoleViteMessagePrefix),
       chalk.green(`Dev server running at: localhost:${port}`)

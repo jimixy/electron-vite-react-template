@@ -70,4 +70,4 @@ app.on('activate', () => {
   }
 })
 
-process.nextTick(main)
+main()

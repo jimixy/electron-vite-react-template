@@ -11,7 +11,8 @@ import {
   startMessage,
   CompileError,
   mainPath,
-  outDirMain
+  outDirMain,
+  listFile
 } from './common'
 
 function reportError(errors: CompileError[]) {
@@ -52,20 +53,6 @@ function transformErrors(error: esbuild.BuildFailure): CompileError[] {
     }
   )
   return errors
-}
-
-function listFile(dir, files = []) {
-  const arr = fs.readdirSync(dir)
-  if (!arr) return files
-  arr.forEach(function (item) {
-    const fullpath = path.join(dir, item)
-    if (fs.statSync(fullpath).isDirectory()) {
-      listFile(fullpath, files)
-    } else {
-      files.push(fullpath)
-    }
-  })
-  return files
 }
 
 //

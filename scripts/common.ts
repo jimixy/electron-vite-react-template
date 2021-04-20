@@ -1,5 +1,6 @@
 import * as os from 'os'
 import * as path from 'path'
+import * as fs from 'fs'
 import * as chalk from 'chalk'
 
 export type WatchMain = (
@@ -29,6 +30,20 @@ export const finishMessageDev = chalk.green(
 export const finishMessageProd = chalk.green(
   `${consoleMessagePrefix} Finished production build.`
 )
+
+export function listFile(dir, files = []) {
+  const arr = fs.readdirSync(dir)
+  if (!arr) return files
+  arr.forEach(function (item) {
+    const fullpath = path.join(dir, item)
+    if (fs.statSync(fullpath).isDirectory()) {
+      listFile(fullpath, files)
+    } else {
+      files.push(fullpath)
+    }
+  })
+  return files
+}
 
 export interface CompileError {
   location: {

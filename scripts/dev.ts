@@ -10,7 +10,8 @@ import {
   formatDiagnosticsMessage,
   mainPath,
   outDir,
-  startMessage
+  startMessage,
+  listFile
 } from './common'
 
 import startElectron from './run-electron'
@@ -61,9 +62,9 @@ async function main() {
   // Start vite server
   viteClose = await startViteServer()
 
-  watchFunc()
+  // watchFunc()
   // Start dev for main process
-  // void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
+  void esDev(reportError, buildStart, buildComplete, notFoundTSConfig)
 }
 
 void main()
@@ -94,11 +95,11 @@ async function esDev(
   if (!fs.existsSync(tsconfigPath)) {
     notFoundTSConfig()
   }
-
+  const entryPoints = listFile(mainPath).filter((k) => k.endsWith('.ts'))
   try {
     await esbuild.build({
       outdir: outDir,
-      entryPoints: [entryPath],
+      entryPoints,
       tsconfig: tsconfigPath,
       format: 'cjs',
       logLevel: 'silent',
