@@ -39,5 +39,8 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "import/dynamic-import-chunkname": "off",
+    "@typescript-eslint/member-ordering": "off",
+    "@typescript-eslint/typedef": "off",
+    "@typescript-eslint/no-floating-promises": "off",
   },
 };

@@ -2,7 +2,15 @@ import { BrowserWindow, app } from 'electron'
 
 import type { BrowserWindowConstructorOptions } from 'electron'
 
+import { Logger } from './logger'
+
 const isDevelopment = !app.isPackaged
+
+async function main() {
+  const logger = new Logger()
+  logger.initialize(app.getPath('userData'))
+  app.whenReady().then(createWindow)
+}
 
 function createWindow() {
   const windowOptions: BrowserWindowConstructorOptions = {
@@ -12,7 +20,7 @@ function createWindow() {
     minWidth: 1366,
     minHeight: 768,
     titleBarStyle: 'hidden',
-    backgroundColor: '#204959',
+    // backgroundColor: '#204959',
     autoHideMenuBar: true,
     frame: false,
     webPreferences: {
@@ -43,16 +51,17 @@ function createWindow() {
   } else {
     void browserWindow.loadFile('./index.html')
   }
+  return browserWindow
 }
 
 if (!app.requestSingleInstanceLock()) {
   app.quit()
 }
 
-void app.whenReady().then(createWindow)
-
 app.on('window-all-closed', () => {
-  app.quit()
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
 
 app.on('activate', () => {
@@ -60,3 +69,5 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+process.nextTick(main)

@@ -1,4 +1,4 @@
-// import '../index.twstyled.css'
+import 'antd/dist/antd.css'
 import './assets/css/index.twstyled.css'
 
 import ReactDOM from 'react-dom'

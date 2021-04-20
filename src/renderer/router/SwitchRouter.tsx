@@ -2,10 +2,8 @@ import React, { Suspense, lazy } from 'react'
 
 import { Redirect, Route, Switch } from 'react-router-dom'
 import { Spin } from 'antd'
+import NotFound from '@/renderer/components/NotFound'
 
-const RouterWrapNotFound = () => {
-  return <div>Not Fount</div>
-}
 /**
  * @private
  *
@@ -13,10 +11,16 @@ const RouterWrapNotFound = () => {
  */
 const PackingWithAuth: React.FC = ({ children }) => {
   return (
-    <Suspense fallback={<Spin />}>
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center min-h-screen">
+          <Spin />
+        </div>
+      }
+    >
       <Switch>
         {children}
-        <Route path="*" component={RouterWrapNotFound}></Route>
+        <Route path="*" component={NotFound}></Route>
       </Switch>
     </Suspense>
   )

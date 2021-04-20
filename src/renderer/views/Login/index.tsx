@@ -9,11 +9,14 @@ console.log(111, fs, electron)
 
 const Login: React.FC = () => {
   const history = useHistory()
+  const test = () => {
+    history.push('/home')
+  }
   return (
     <Layout>
       登录页
       <br />
-      <button onClick={() => history.push('/home')}>去首页</button>
+      <button onClick={() => test()}>去首页</button>
     </Layout>
   )
 }

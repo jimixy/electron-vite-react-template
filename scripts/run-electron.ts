@@ -51,7 +51,11 @@ export default async function startElectron(
   }
 
   // eslint-disable-next-line require-atomic-updates
-  electronProcess = childProcess.spawn(electron, [path])
+  electronProcess = childProcess.spawn(electron, [
+    '--inspect=5858',
+    '--remote-debugging-port=9222',
+    path
+  ])
   electronProcess.on('exit', async (code) => {
     if (!exitByScripts) {
       console.log(chalk.gray(`Electron exited with code ${code}`))

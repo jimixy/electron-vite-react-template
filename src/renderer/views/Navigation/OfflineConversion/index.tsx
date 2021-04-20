@@ -1,10 +1,15 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Layout from '@/renderer/layout/Navigation'
+import Layout, { Footer } from '@/renderer/layout/Navigation'
 
 const Wrap: React.FC = () => {
   const history = useHistory()
-  return <Layout.Content>这是在线会议</Layout.Content>
+  return (
+    <>
+      <Layout.Content>离线会议</Layout.Content>
+      <Footer></Footer>
+    </>
+  )
 }
 
 export default Wrap

@@ -28,19 +28,10 @@ function reportError(errors: CompileError[]) {
 function watchFunc() {
   // once here, all resources are available
   const watcher = rollup.watch(options('development'))
-  watcher.on('change', (filename) => {
-    // const log = chalk.green(`change -- ${filename}`)
-    // console.log(111, filename)
-  })
+  watcher.on('change', (filename) => {})
   watcher.on('event', (ev) => {
-    // console.log(222, ev)
     if (ev.code === 'END') {
       buildComplete(outDir)
-      //   // init-未启动、started-第一次启动、restarted-重新启动
-      //   electron.electronState === 'init' ? electron.start() : electron.restart()
-      // } else if (ev.code === 'ERROR') {
-      //   console.log(ev.error)
-      // }
     }
   })
 }

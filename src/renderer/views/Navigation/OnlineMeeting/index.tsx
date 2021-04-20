@@ -4,7 +4,7 @@ import Layout from '@/renderer/layout/Navigation'
 
 const Wrap: React.FC = () => {
   const history = useHistory()
-  return <Layout.Content>离线转写</Layout.Content>
+  return <Layout.Content>在线转写</Layout.Content>
 }
 
 export default Wrap
